@@ -10,10 +10,10 @@ terraform {
 
   cloud {
 
-    organization = "hc-team"
+    organization = "achn-testing"
 
     workspaces {
-      name = "be-network-ws"
+      name = "vcs-be-network"
     }
   }
 }
