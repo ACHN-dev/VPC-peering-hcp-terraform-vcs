@@ -1,5 +1,5 @@
 terraform {
-  required_version = "~>1.16.0"
+  required_version = "~>1.17.0"
 
   required_providers {
     aws = {
@@ -10,10 +10,10 @@ terraform {
 
   cloud {
 
-    organization = "hc-team"
+    organization = "achn-testing"
 
     workspaces {
-      name = "vpc-peering-intra-region-ws"
+      name = "vcs-peering-ws"
     }
   }
 }

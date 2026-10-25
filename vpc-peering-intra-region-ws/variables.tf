@@ -9,29 +9,29 @@ variable "region" {
 variable "be_network_workspace_name" {
   description = "Name of the network workspace to query."
   type        = string
-  default     = "be-network-ws"
+  default     = "vcs-be-network"
 }
 
 variable "be_security_workspace_name" {
   description = "Name of the security workspace to query."
   type        = string
-  default     = "be-security-ws"
+  default     = "vcs-be-security"
 }
 
 variable "fe_network_workspace_name" {
   description = "Name of the network workspace to query."
   type        = string
-  default     = "fe-network-ws"
+  default     = "vcs-fe-network"
 }
 
 variable "fe_security_workspace_name" {
   description = "Name of the security workspace to query."
   type        = string
-  default     = "fe-security-ws"
+  default     = "vcs-fe-security"
 }
 
 variable "organization_name" {
   description = "Name of the HCP Terraform organization with the source workspace"
   type        = string
-  default     = "hc-team"
+  default     = "achn-testing"
 }
