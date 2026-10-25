@@ -161,45 +161,12 @@ resource "aws_vpc_security_group_ingress_rule" "be_private_sg03_allow_icmp_from_
   to_port                      = 0
 }
 
-# resource "aws_vpc_security_group_ingress_rule" "be_private_sg03_allow_ssh_from_fe_private_sg03" {
-#   security_group_id = aws_security_group.be_private_sg03.id
-#   # referenced_security_group_id = aws_security_group.be_private_sg03.id
-#   referenced_security_group_id = data.tfe_outputs.fe_security_source_workspace.nonsensitive_values.frontend_private_sg03_id
-#   from_port                    = 22
-#   ip_protocol                  = "tcp"
-#   to_port                      = 22
+
+# # 🧪 Test Violating Rule (0.0.0.0/0 )
+# resource "aws_vpc_security_group_ingress_rule" "test_violation" {
+#   security_group_id = aws_security_group.be_private_sg01.id
+#   cidr_ipv4         = "0.0.0.0/0"
+#   ip_protocol       = "tcp"
+#   from_port         = 80
+#   to_port           = 80
 # }
-
-# resource "aws_vpc_security_group_ingress_rule" "be_private_sg03_allow_icmp_from_fe_private_sg03" {
-#   security_group_id            = aws_security_group.be_private_sg03.id
-#   referenced_security_group_id = data.tfe_outputs.fe_security_source_workspace.nonsensitive_values.frontend_private_sg03_id
-#   from_port                    = 8
-#   ip_protocol                  = "icmp"
-#   to_port                      = 0
-# }
-
-# resource "aws_vpc_security_group_egress_rule" "be_private_sg03_allow_ssh_to_fe_private_sg03" {
-#   security_group_id            = aws_security_group.be_private_sg03.id
-#   referenced_security_group_id = data.tfe_outputs.fe_security_source_workspace.nonsensitive_values.frontend_private_sg03_id
-#   from_port                    = 22
-#   ip_protocol                  = "tcp"
-#   to_port                      = 22
-# }
-
-# resource "aws_vpc_security_group_egress_rule" "be_private_sg03_allow_icmp_to_fe_private_sg03" {
-#   security_group_id            = aws_security_group.be_private_sg03.id
-#   referenced_security_group_id = data.tfe_outputs.fe_security_source_workspace.nonsensitive_values.frontend_private_sg03_id
-#   from_port                    = 8
-#   ip_protocol                  = "icmp"
-#   to_port                      = 0
-# }
-
-
-# 🧪 Test Violating Rule (0.0.0.0/0 )
-resource "aws_vpc_security_group_ingress_rule" "test_violation" {
-  security_group_id = aws_security_group.be_private_sg01.id
-  cidr_ipv4         = "0.0.0.0/0"
-  ip_protocol       = "tcp"
-  from_port         = 80
-  to_port           = 80
-}
