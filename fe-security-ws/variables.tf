@@ -32,8 +32,3 @@ variable "frontend_public_subnet_cidr" {
   default = "0.0.0.0/0"
 }
 
-# variable "be_security_workspace_name" {
-#   description = "Name of the backend security workspace to query."
-#   type        = string
-#   default     = "be-security-ws"
-# }
