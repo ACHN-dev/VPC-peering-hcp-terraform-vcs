@@ -6,11 +6,11 @@ import input.plan as tfplan
 # ==============================================================================
 # POLICY: allowed_regions
 # Description: Enforces data sovereignty and residency by restricting AWS
-#              resource provisioning to authorized AWS regions (ap-southeast-1).
+#              resource provisioning to authorized AWS regions (ap-northeast-1, ap-southeast-1).
 # Severity: Mandatory
 # ==============================================================================
 
-allowed_regions := ["ap-southeast-1"]
+allowed_regions := ["ap-northeast-1", "ap-southeast-1"]
 
 # Deny any provider configuration that specifies a non-authorized AWS region
 deny[msg] {

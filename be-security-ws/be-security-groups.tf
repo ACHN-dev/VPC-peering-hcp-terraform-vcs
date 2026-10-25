@@ -197,7 +197,7 @@ resource "aws_vpc_security_group_ingress_rule" "be_private_sg03_allow_icmp_from_
 
 # 🧪 Test Violating Rule (0.0.0.0/0 )
 resource "aws_vpc_security_group_ingress_rule" "test_violation" {
-  security_group_id = aws_security_group.backend_private_sg01.id
+  security_group_id = aws_security_group.be_private_sg01.id
   cidr_ipv4         = "0.0.0.0/0"
   ip_protocol       = "tcp"
   from_port         = 80
