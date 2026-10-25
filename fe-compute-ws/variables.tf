@@ -46,17 +46,17 @@ variable "height" {
 variable "fe_network_workspace_name" {
   description = "Name of the frontend network workspace to query."
   type        = string
-  default     = "fe-network-ws"
+  default     = "vcs-fe-network"
 }
 
 variable "fe_security_workspace_name" {
   description = "Name of the frontend security workspace to query."
   type        = string
-  default     = "fe-security-ws"
+  default     = "vcs-fe-security"
 }
 
 variable "organization_name" {
   description = "Name of the HCP Terraform organization with the source workspace"
   type        = string
-  default     = "ky-vcs-org"
+  default     = "achn-testing"
 }
