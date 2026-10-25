@@ -8,6 +8,11 @@ By isolating the peering link and cross-VPC security rules into this dedicated w
 
 ## 🏗 Architecture & Peering Traffic Flow Diagram
 
+![End-to-End Infrastructure Architecture with Peering](../architecture.png)
+
+<details>
+<summary><b>Click to view Mermaid Peering Traffic Flow Diagram</b></summary>
+
 ```mermaid
 flowchart TD
     subgraph FE["Frontend VPC (10.0.0.0/16)"]
@@ -46,6 +51,7 @@ flowchart TD
     FE_SG2 <-->|SSH and ICMP Rules| BE_SG2
     FE_SG3 <-->|SSH and ICMP Rules| BE_SG3
 ```
+</details>
 
 ---
 
