@@ -16,13 +16,13 @@ variable "backend_environment" {
 variable "be_network_workspace_name" {
   description = "Name of the network workspace to query."
   type        = string
-  default     = "be-network-ws"
+  default     = "vcs-be-network"
 }
 
 variable "organization_name" {
   description = "Name of the HCP Terraform organization with the source workspace"
   type        = string
-  default     = "hc-team"
+  default     = "achn-testing"
 }
 
 variable "backend_public_subnet_cidr" {
