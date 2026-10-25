@@ -16,13 +16,13 @@ variable "frontend_environment" {
 variable "fe_network_workspace_name" {
   description = "Name of the network workspace to query."
   type        = string
-  default     = "fe-network-ws"
+  default     = "vcs-fe-network"
 }
 
 variable "organization_name" {
   description = "Name of the HCP Terraform organization with the source workspace"
   type        = string
-  default     = "ky-vcs-org"
+  default     = "achn-testing"
 }
 
 variable "frontend_public_subnet_cidr" {
